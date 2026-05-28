@@ -1,0 +1,131 @@
+:root {
+  --nv-bg: #0f1115;
+  --nv-surface: #181b22;
+  --nv-surface-2: #20242d;
+  --nv-text: #e6e8ec;
+  --nv-muted: #8b94a3;
+  --nv-accent: #7c5cff;
+  --nv-accent-2: #4dd6c1;
+  --nv-danger: #ef4444;
+  --nv-border: #2a2f3a;
+  --nv-radius: 8px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: var(--nv-bg);
+  color: var(--nv-text);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+a {
+  color: var(--nv-accent);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.nv-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.nv-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--nv-border);
+  background: var(--nv-surface);
+}
+
+.nv-brand {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--nv-text);
+}
+
+.nv-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nv-user {
+  color: var(--nv-muted);
+  font-size: 12px;
+}
+
+.nv-link-btn {
+  background: none;
+  border: none;
+  color: var(--nv-accent);
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+.nv-link-btn:hover { text-decoration: underline; }
+
+.nv-main {
+  flex: 1;
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.nv-hero {
+  text-align: center;
+  padding: 64px 0;
+}
+.nv-hero h1 { font-size: 40px; margin: 0 0 8px; }
+.nv-hero p { color: var(--nv-muted); margin: 0 0 24px; }
+.nv-hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.nv-card {
+  background: var(--nv-surface);
+  border: 1px solid var(--nv-border);
+  border-radius: var(--nv-radius);
+  padding: 24px;
+}
+
+.nv-muted { color: var(--nv-muted); }
+
+.nv-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid var(--nv-border);
+  border-radius: var(--nv-radius);
+  background: var(--nv-surface-2);
+  color: var(--nv-text);
+  cursor: pointer;
+  font: inherit;
+  text-decoration: none;
+}
+.nv-btn:hover { background: var(--nv-surface); }
+
+.nv-btn-primary {
+  background: var(--nv-accent);
+  border-color: var(--nv-accent);
+  color: #fff;
+}
+.nv-btn-primary:hover { filter: brightness(1.08); }
+
+.nv-btn-danger {
+  background: var(--nv-danger);
+  border-color: var(--nv-danger);
+  color: #fff;
+}
